@@ -1929,6 +1929,7 @@ Twinkle.tag.callbacks = {
 				switch (tag) {
 					case 'Now Commons':
 						currentTag = 'subst:' + currentTag; // subst
+						currentTag += '|date=' + new Morebits.date().format('D MMMM Y', 'utc'); // add date
 						if (params.nowcommonsName !== '') {
 							currentTag += '|1=' + params.nowcommonsName;
 						}
